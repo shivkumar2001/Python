@@ -5,8 +5,11 @@ def merge(arr, left, mid, right):
     left_arr = arr[left : mid + 1]
     right_arr = arr[mid + 1 : right + 1]
     k = left
+    #the original array will start from left(starting index of portion of array or full array from left to right). 
     i = 0
+    #i=0 indicate that extra array is just to hold the values temporarily. and not permanently.
     j = 0
+     #j=0 indicate that extra array is just to hold the values temporarily. and not permanently.
     while i < len(left_arr) and j < len(right_arr):
         # change sign for Descending order
         if left_arr[i] < right_arr[j]:
@@ -33,6 +36,7 @@ def mergesort(arr, left, right):
     [1, 2, 3]
     >>> mergesort([3, 2, 1, 0, 1, 2, 3, 5, 4], 0, 8)
     [0, 1, 1, 2, 2, 3, 3, 4, 5]
+    
     """
     if left < right:
         mid = (left + right) // 2
